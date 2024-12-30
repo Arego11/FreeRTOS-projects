@@ -11,7 +11,7 @@ static const int rate2 = 1000;
 
 static const int led_pin = LED_BUILTIN;
 
-const char msg[] = "A message that one thread will pring.";
+const char msg[] = "A message that one thread will print.";
 
 //handlers for 2 threads so they will be controlled by the 3rd task.
 static TaskHandle_t thread1 = NULL;
@@ -24,7 +24,7 @@ void startThread1(void *parameter){
   while(1){
     Serial.println();
     for(int i = 0; i < msg_len; i++){
-      Serial.println(msg[i]);
+      Serial.print(msg[i]);
     }
 
     Serial.println();
